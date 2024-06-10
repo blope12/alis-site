@@ -1,0 +1,229 @@
+body {
+margin: 0;
+padding: 0;
+overflow-x: hidden; /* جلوگیری از اسکرول به سمت چپ و راست */
+
+}
+
+*{
+    font-family: "Vazirmatn", sans-serif;
+
+}
+
+.textsm{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+height: 60vh;
+
+}
+.textsm h1{
+font-size: 70px;
+margin-bottom: -20px;
+margin-top: 40px;
+}
+.textsm p{
+font-size: 20px;
+margin-bottom: 40px;
+
+}
+.textsm button {
+margin-bottom: -50px;
+background-color: rgb(24, 24, 24);
+padding: 20px 27px;
+font-size: 20px;
+min-height: 60px; 
+border: none;
+border-radius: 50px;
+transition: all 0.5s ease-in-out, opacity 0.5s ease-in-out;
+cursor: pointer;
+z-index: 999;
+}
+
+.textsm button:hover {
+font-size: 25px;
+background-color: rgb(9, 43, 116);
+box-shadow: 0px 70px 200px 1px rgb(9, 43, 116);
+}
+
+
+
+
+.image-container {
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+margin-top: -200px;
+width: 90%;
+margin-left: auto;
+margin-right: auto;
+}
+
+.image-container img {
+max-width: 50%; /* تصاویر را به اندازه والد محدود کنید */
+}
+
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(20px, 20px); /* حرکت به سمت راست و پایین */
+    }
+    75% {
+        transform: translate(-20px, -40px); /* حرکت به سمت چپ و بالا */
+    }
+}
+
+.alis1 {
+width: 45%;
+margin-left: 200px;
+margin-top: 0px;
+animation: float 5s ease-in-out infinite; /* انیمیشن با مدت زمان 3 ثانیه و تکرار بی‌نهایت */
+}
+
+
+@keyframes float1bg {
+
+    0%, 100% {
+        transform: translate(0, 0);
+
+    }
+    40% {
+        transform: translate(0px, 20px); /* حرکت به سمت راست و پایین */
+    }
+    80% {
+        transform: translate(-10px, 40px); /* حرکت به سمت چپ و بالا */
+    }
+
+
+} 
+.alis1bg {
+position: absolute;
+bottom: -20px;
+right: -80px;
+width: 100%; /* عرض کامل والد */
+height: 100%; /* ارتفاع کامل والد */
+z-index: -1; /* به پشت alis2 بروید */
+animation: float1bg 4s ease-in-out infinite;
+margin-top: -100px;
+}
+
+
+
+@keyframes float2 {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    30% {
+        transform: translate(0px, 20px); /* حرکت به سمت راست و پایین */
+    }
+    75% {
+        transform: translate(-10px, 40px); /* حرکت به سمت چپ و بالا */
+    }
+}
+
+.alis2 {
+width: 45%;
+margin-left: 200px;
+margin-top: 0px;
+animation: float2 3s ease-in-out infinite; 
+margin-left: 60px;
+}
+
+@keyframes float2bg {
+
+    0%, 100% {
+        transform: translate(0, 0);
+
+    }
+    30% {
+        transform: translate(0px, 20px); /* حرکت به سمت راست و پایین */
+    }
+    75% {
+        transform: translate(-10px, 40px); /* حرکت به سمت چپ و بالا */
+    }
+
+
+} 
+
+.alis2bg {
+position: absolute;
+top: 0;
+left: 0;
+width: 120%; /* عرض کامل والد */
+height: 120%; /* ارتفاع کامل والد */
+z-index: 22; /* به پشت دیگر تصاویر بروید */
+animation: float2bg 5s ease-in-out infinite; 
+margin-top: -100px;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .textsm h1 {
+        font-size: 50px;
+    }
+    .textsm p {
+        font-size: 18px;
+    }
+    .textsm button {
+        padding: 10px 27px;
+        font-size: 15px;
+    }
+    .textsm button:hover {
+        padding: 10px 27px;
+        font-size: 18px;
+        background-color: rgb(9, 43, 116);
+        box-shadow: 0px 70px 200px 1px rgb(9, 43, 116);
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row; 
+        position: relative;
+        margin-top: 20px;
+        width: 250%; 
+    }
+
+    .alis1 {
+        position: absolute;
+        width:900px; /* تنظیم عرض به 100% */
+        animation: float 5s ease-in-out infinite; 
+        margin-right: 490px;
+    }
+
+    .alis2 {
+        position: absolute;
+        width:1400px; /* تنظیم عرض به 100% */
+        animation: float2 3s ease-in-out infinite; 
+        margin-left: -900px;
+    }
+    .alis1bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width:800px; /* تنظیم عرض به 100% */
+        z-index: -1; /* به پشت دیگر تصاویر بروید */
+        animation: float2bg 5s ease-in-out infinite; 
+        margin-left: -200px;
+
+    }
+    .alis2bg {
+        position: relative;
+        top: 0;
+        left: 0;
+        width:700px; /* تنظیم عرض به 100% */
+        z-index: 2; /* به پشت دیگر تصاویر بروید */
+        animation: float2bg 5s ease-in-out infinite; 
+        margin-right: 900px;
+        filter: blur(4px);
+    }
+
+}

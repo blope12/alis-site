@@ -1,0 +1,231 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Vazirmatn", sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* اضافه کردن فلکس-رپ برای شکستن به خط بعدی */
+    margin-top: 300px;
+  }
+  
+  .text-container {
+    position: absolute;
+    margin-right: 20px;
+    width: 500px;
+    height: 400px;
+    text-align: end;
+    left: 20%;
+    margin-top: 300px;
+    z-index: 999;
+  }
+  
+  .text-container h1 {
+    font-size: 45px;
+    margin-bottom: 30px;
+  }
+  
+  .text-container p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .text-container p a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .text-container p a:hover {
+    text-decoration: none;
+  }
+  
+  .text-container a:hover {
+    text-decoration: underline;
+  }
+  
+  .pcont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  .pcont p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    position: relative; /* For positioning the Vitamin text */
+    font-size: 30px;
+    margin-left: 40px;
+    font-weight: bolder;
+    background-color: #00174a;
+    padding: 20px;
+    color: #fff; /* Text color */
+    border-radius: 50%;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .pcont p:hover {
+    transform: scale(1.2);
+  }
+  
+  .pcont p::after {
+    content: "Vitamin";
+    display: block;
+    font-size: 20px;
+    color: #ccc; /* Lighter text color */
+    text-align: center;
+  }
+  
+  .reveal {
+    opacity: 0;
+    transition: 0.8s all ease-in-out;
+  }
+  
+  .reveal.active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  .image-container2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    height: 400px;
+    width: 100%;
+    position: absolute;
+    margin-top: 300px;
+    right: 170px;
+  }
+  
+  .image-container2 img {
+    height: auto;
+  }
+  
+  .image-container2 .img1-wrapper {
+    position: relative;
+    width: 32%;
+    margin-bottom: 30px;
+    background: linear-gradient(-145deg, #ff8009, #180e05); /* Example background */
+    border-radius: 100%;
+  }
+  
+  @keyframes rotateAnimation {
+    0% {
+      transform: rotate(12deg);
+    }
+    50% {
+      transform: rotate(-15deg);
+    }
+    75% {
+      transform: rotate(-25deg);
+    }
+    100% {
+      transform: rotate(12deg);
+    }
+  }
+  
+  .image-container2 .img1 {
+    width: 100%;
+    height: auto;
+    animation: rotateAnimation 10s ease-in-out infinite; /* Add animation here */
+  }
+  
+  @keyframes rotateAnimation2 {
+    0% {
+      transform: translateX(-100);
+    }
+    50% {
+      transform: translateX(100px); /* Move right */
+    }
+    100% {
+      transform: translateX(-100); /* Move back to original position */
+    }
+  }
+  
+  .image-container2 .img2 {
+    display: block;
+    width: 14%;
+    margin-bottom: -200px;
+    margin-right: -200px;
+    z-index: 99;
+    animation: rotateAnimation2 10s ease-in-out infinite; /* Add animation here */
+  }
+  
+  @keyframes rotateAnimation3 {
+    0% {
+      transform: translateX(100);
+    }
+    70% {
+      transform: translateX(-100px); /* Move right */
+    }
+    100% {
+      transform: translateX(100); /* Move back to original position */
+    }
+  }
+  
+  .image-container2 .img3 {
+        display: block;
+
+    width: 14%;
+    margin-bottom: 200px;
+    margin-left: -200px;
+    z-index: 99;
+    animation: rotateAnimation3 10s ease-in-out infinite; /* Add animation here */
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+
+    }
+  
+    .text-container {
+      margin-right: 0;
+      margin-bottom: 20px;
+      position: relative; /* تغییر موقعیت به نسبت نسبی */
+      left: auto;
+      margin-top: 0; /* تنظیم margin-top به 0 */
+      width: 80%; /* تنظیم عرض به 80% */
+      
+    }
+    .pcont{
+        display: none;
+    }
+  
+    .image-container2 {
+      justify-content: center;
+      flex-direction: column;
+      height: auto;
+      position: relative; /* تغییر موقعیت به نسبت نسبی */
+      right: auto;
+      margin-top: 20px; /* تنظیم margin-top به 20px */
+    }
+
+    .image-container2 .img1-wrapper {
+        position: relative;
+        width: 100%;
+        margin-bottom: 30px;
+        background: linear-gradient(-145deg, #ff8009, #180e05); /* Example background */
+        border-radius: 100%;
+      }
+
+
+    .image-container2 .img2  {
+        display: none;
+
+    }
+    .image-container2 .img3  {
+        display: none;
+
+    }
+  }
+  
