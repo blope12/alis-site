@@ -48,9 +48,6 @@ Follow these steps to install the project dependencies:
 art
     ```
 
-## Running the Project
-
-To start the development server, run the following command:
 
 ![Screenshot 2024-06-10 190132](https://github.com/blope12/alis/assets/148343881/660986aa-8d6b-4377-bf2e-8ed125235953)
 
