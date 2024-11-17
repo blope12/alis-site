@@ -1,0 +1,254 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Vazirmatn", sans-serif;
+  }
+  .container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* فاصله بین متن و تصویر */
+    margin-top: 700px; /* فاصله از بالا برای مرکزیت */
+  }
+  
+  .text-section {
+    position: absolute;
+    text-align: right;
+    margin-left: -40%;
+    margin-top: 450px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    direction: rtl; 
+    width: 800px;
+
+  }
+  
+  .text-section h1{
+    font-size: 80px;
+    text-align: right;
+    color: #00174a;
+    font-weight:900;
+    margin-bottom: -10px;
+
+  }
+
+.text-section .p1{
+    text-align: right;
+    font-size: 20px;
+    font-weight:900;
+    margin-bottom: -10px;
+}
+
+.text-section .p2{
+    text-align: right;
+    font-size: 18px;
+
+}
+.text-section .p3:hover{
+
+    cursor: pointer;
+}
+
+.hr1{
+border: 2px solid #00174a;
+width: 800px;
+
+}
+
+.text-section.reveal {
+    opacity: 0;
+    transform: translateX(-200px); /* موقعیت اولیه از سمت چپ */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+
+}
+
+.text-section.reveal.active {
+    opacity: 1;
+    transform: translateX(0); /* به موقعیت اصلی برمی‌گردد */
+}
+
+.containerpbs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; /* Displays items in a row */
+    gap: 40px; /* Spacing between items */
+  }
+  
+  .pb1 {
+    background-color: #006956; 
+    border-radius: 50%; 
+    width: 110px; 
+    height: 110px; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+    font-size: 20px; 
+    font-weight: 900;
+    color: #ffffff; 
+    transform: rotate(-30deg);
+}
+  
+  .pb {
+    background-color: #009989;
+    border-radius: 50%; 
+    width: 110px; 
+    height: 110px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    text-align: center; 
+    font-size: 20px; 
+    font-weight: 900;
+
+    color: #ffffff; /* Text color */
+    transform: rotate(-30deg);
+
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.image-section{
+    margin-left:130px;
+}
+
+.anime1{
+    position: absolute;
+    width: 35%;
+
+}
+
+.anime2 {
+    position: absolute;
+    width: 35%;
+    animation: growShrink 5s ease-in-out infinite;
+}
+
+@keyframes growShrink {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.anime3 {
+    position: absolute;
+    width: 35%;
+    animation: float 3s ease-in-out infinite; /* تکرار بی‌نهایت */
+}
+
+@keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px); /* حرکت به بالا */
+    }
+    100% {
+      transform: translateY(0); /* بازگشت به موقعیت اصلی */
+    }
+  }
+
+
+
+  
+  .anime1.reveal {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+  }
+  
+  .anime1.reveal.active {
+    opacity: 1;
+    animation: jump 1s ease-in-out;
+  }
+  @keyframes jump {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.15); /* بالا رفتن */
+    }
+    100% {
+      transform: scale(1); /* برگشت به موقعیت اصلی */
+    }
+  }
+
+
+
+
+
+
+  @media screen and (max-width: 768px) {
+    .container2 {
+      flex-direction: column;
+      gap: 40px; /* فاصله بین بخش‌های متن و تصویر */
+      margin-top: 200px; /* تنظیم فاصله از بالا */
+    }
+  
+    .text-section {
+      position: static; /* حذف موقعیت مطلق برای موبایل */
+      text-align: center;
+      margin: 0 auto; /* تنظیم مرکزیت */
+      margin-top: 0; /* حذف فاصله اضافی بالا */
+      width: 90%; /* استفاده از عرض صفحه */
+    }
+  
+    .text-section h1 {
+      font-size: 40px; /* کاهش اندازه فونت عنوان */
+    }
+  
+    .text-section .p1,
+    .text-section .p2 {
+      font-size: 16px; /* کوچک کردن فونت پاراگراف‌ها */
+    }
+  
+    .hr1 {
+      width: 90%; /* کاهش عرض خط */
+    }
+  
+    .containerpbs {
+      display: none;
+    }
+  
+    .pb1,
+    .pb {
+      display: none;
+
+
+    }
+  
+    .image-section {
+      margin-left: 0; /* حذف فاصله اضافی چپ */
+      display: flex;
+      justify-content: center; /* تنظیم مرکزیت تصاویر */
+      flex-wrap: wrap; /* چیدمان تصاویر در چند خط */
+      gap: 20px; /* فاصله بین تصاویر */
+    }
+  
+    .anime1,
+    .anime2,
+    .anime3 {
+      width: 120%; /* تنظیم عرض تصاویر */
+    }
+  }
+  

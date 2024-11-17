@@ -1,0 +1,67 @@
+.lists{
+
+  margin-top: 800px; /* فاصله از بالا برای مرکزیت */
+}
+
+.product-list {
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin-right: 10%;
+  gap: 13px;
+}
+
+.product-list li {
+  background-color: white;
+  border: none;
+  border-radius: 40px;
+  padding: 13px 20px;
+  cursor: pointer;
+  text-align: center;
+  color: black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.product-list li:hover {
+  background-color: #00174a;
+  transform: scale(1.05);
+  color: white;
+
+}
+
+
+
+
+.image-grid {
+  display: grid;
+  margin-left: 15%;
+  margin-right: 15%;
+
+  grid-template-columns: repeat(4, 1fr); /* ۴ ستون مساوی */
+  gap: 15px; /* فاصله بین آیتم‌ها */
+  margin-top: 80px; /* فاصله از بالا برای مرکزیت */
+
+}
+
+
+.image-grid img {
+
+  width: 110%;
+  transition: transform 0.3s ease;
+  margin-bottom: 10px;
+
+}
+
+.image-grid img:hover {
+  transform: scale(1.1);
+}
+figcaption {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  font-weight: 900;
+}
